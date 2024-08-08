@@ -48,7 +48,7 @@
           const response = await axios.get(this.websiteForChecking);
           console.log('Status Code:', response.status);
           console.log('response:', response);
-          console.log('Page Title:', response.headers['title']); // Пример получения заголовков, если они есть
+          console.log('Page Title:', response.headers['title']);
 
           const $ = cheerio.load(response.data);              
           const title = $('title').text();
